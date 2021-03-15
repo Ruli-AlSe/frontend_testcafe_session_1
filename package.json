@@ -4,7 +4,7 @@
   "description": "Front End - TestCafe challenge 1",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-all-chrome": "testcafe chrome ./page_model/tests"
   },
   "author": "Raul Almanza",
   "license": "ISC",
