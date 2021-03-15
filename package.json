@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "testcafe": "^1.12.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
   }
 }
