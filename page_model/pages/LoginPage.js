@@ -1,4 +1,4 @@
-import { Selector } from 'testcafe';
+import { Selector, t } from 'testcafe';
 
 class LoginPage {
     constructor() {
@@ -7,6 +7,12 @@ class LoginPage {
         this.loginButton = Selector('.btn_action');
         this.errorMessage = Selector('h3[data-test="error"]');
         this.loginForm = Selector('.login_wrapper');
+    }
+
+    async submitLoginForm(username, password) {
+        await t.typeText(this.usernameField, username);
+        await t.typeText(this.passwordField, password);
+        await t.click(this.loginButton);
     }
 }
 
