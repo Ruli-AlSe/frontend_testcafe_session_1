@@ -7,6 +7,7 @@ class ShoppingCartPage {
         this.secondProduct = Selector('.cart_list .cart_item:nth-of-type(4) .inventory_item_name');
         this.thirdProduct = Selector('.cart_list .cart_item:nth-of-type(5) .inventory_item_name');
         this.fourthProduct = Selector('.cart_list .cart_item:nth-of-type(6) .inventory_item_name');
+        this.checkoutButton = Selector('.btn_action.checkout_button');
     }
 }
 

@@ -16,8 +16,7 @@ test('Navigate to shopping cart', async t => {
 
 test('Add a single item to the shopping cart', async t => {
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD);
-    await t.click(ProductsPage.firstA2CButton)
-        .click(ProductsPage.shoppingCartButton);
+    await ProductsPage.defaultAdd2Cart();
 
     await t.expect(ShoppingCartPage.firstProduct.innerText).eql(PRODUCTS_NAMES.FIRST_PRODUCT);
 });

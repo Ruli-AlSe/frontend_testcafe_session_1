@@ -1,4 +1,4 @@
-import { Selector } from 'testcafe';
+import { Selector, t } from 'testcafe';
 
 class ProductsPage {
     constructor() {
@@ -10,6 +10,11 @@ class ProductsPage {
         this.secondA2CButton = Selector('.inventory_item:nth-of-type(2) .btn_primary.btn_inventory');
         this.fourthA2CButton = Selector('.inventory_item:nth-of-type(4) .btn_primary.btn_inventory');
         this.fifthA2CButton = Selector('.inventory_item:nth-of-type(5) .btn_primary.btn_inventory');
+    }
+
+    async defaultAdd2Cart() {
+        await t.click(this.firstA2CButton)
+            .click(this.shoppingCartButton);
     }
 }
 

@@ -25,3 +25,9 @@ export const PRODUCTS_NAMES = {
     FOURTH_PRODUCT: 'Sauce Labs Fleece Jacket',
     FIFTH_PRODUCT: 'Sauce Labs Onesie'
 }
+
+export const USER_INFORMATION = {
+    FIRST_NAME: 'Raul',
+    LAST_NAME: 'Almanza',
+    ZIP_CODE: '38400'
+}
