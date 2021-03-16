@@ -9,7 +9,7 @@ fixture('Checkout Information page testing').page `https://www.saucedemo.com/`;
 
 test('Continue with missing mail information', async t => {
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD);
-    await ProductsPage.defaultAdd2Cart();
+    await ProductsPage.addSingleItemToCart();
     await t.click(ShoppingCartPage.checkoutButton)
         .click(CheckoutInformationPage.continueButton)
     
@@ -19,7 +19,7 @@ test('Continue with missing mail information', async t => {
 
 test('Fill user\'s information', async t => {
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD);
-    await ProductsPage.defaultAdd2Cart();
+    await ProductsPage.addSingleItemToCart();
     await t.click(ShoppingCartPage.checkoutButton);
     await CheckoutInformationPage.fillUserInfo();
     await t.click(CheckoutInformationPage.continueButton);
