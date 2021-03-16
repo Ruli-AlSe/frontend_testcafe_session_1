@@ -16,7 +16,10 @@ export const PAGES_TITLES = {
     PRODUCTS_PAGE: 'Products',
     CHECKOUT_INFO_PAGE: 'Checkout: Your Information',
     CHECKOUT_OVERVIEW_PAGE: 'Checkout: Overview',
-    ORDER_COMPLETE_PAGE: 'Finish'
+    ORDER_COMPLETE_PAGE: {
+        TITLE: 'Finish',
+        MESSAGE: 'THANK YOU FOR YOUR ORDER'
+    }
 }
 
 export const PRODUCTS_NAMES = {
