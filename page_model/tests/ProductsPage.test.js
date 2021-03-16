@@ -5,6 +5,9 @@ import { CREDENTIALS, PAGES_TITLES, PRODUCTS_NAMES } from '../data/Constants';
 
 fixture('Products page testing')
     .page `https://www.saucedemo.com/`
+    .beforeEach(async t => {
+        await t.maximizeWindow();
+    });
 
 test('Navigate to shopping cart', async t => {
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD);

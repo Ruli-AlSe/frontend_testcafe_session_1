@@ -5,7 +5,11 @@ import CheckoutInformationPage from '../pages/CheckoutInformationPage';
 import CheckoutOverviewPage from '../pages/CheckoutOverviewPage';
 import { CREDENTIALS, PAGES_TITLES } from '../data/Constants';
 
-fixture('Checkout Information page testing').page `https://www.saucedemo.com/`;
+fixture('Checkout Information page testing')
+    .page `https://www.saucedemo.com/`
+    .beforeEach(async t => {
+        await t.maximizeWindow();
+    });
 
 test('Continue with missing mail information', async t => {
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD);

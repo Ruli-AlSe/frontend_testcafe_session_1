@@ -6,7 +6,11 @@ import CheckoutOverviewPage from '../pages/CheckoutOverviewPage';
 import OrderCompletePage from '../pages/OrderCompletePage';
 import { CREDENTIALS, PRODUCTS_NAMES, PAGES_TITLES } from '../data/Constants';
 
-fixture('Checkout Overview page testing').page `https://www.saucedemo.com/`;
+fixture('Checkout Overview page testing')
+    .page `https://www.saucedemo.com/`
+    .beforeEach(async t => {
+        await t.maximizeWindow();
+    });
 
 test('Final order items', async t => {
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD);
