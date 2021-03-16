@@ -4,7 +4,8 @@
   "description": "Front End - TestCafe challenge 1",
   "main": "index.js",
   "scripts": {
-    "test-all-chrome": "testcafe chrome ./page_model/tests"
+    "test-all-chrome": "testcafe chrome ./page_model/tests",
+    "test-all-browsers": "testcafe chrome,firefox,edge,ie ./page_model/tests"
   },
   "author": "Raul Almanza",
   "license": "ISC",
