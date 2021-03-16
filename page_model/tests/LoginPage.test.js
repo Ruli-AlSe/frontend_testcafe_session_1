@@ -1,6 +1,6 @@
 import LoginPage from '../pages/LoginPage';
 import ProductsPage from '../pages/ProductsPage';
-import { CREDENTIALS } from '../data/Constants';
+import { CREDENTIALS, PAGES_TITLES } from '../data/Constants';
 
 fixture('Login feature testing')
     .page `https://www.saucedemo.com/`
@@ -8,6 +8,7 @@ fixture('Login feature testing')
 test('Login with valid user', async t => {
     await LoginPage.submitLoginForm(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD);
     await t.expect(ProductsPage.pageTitle.exists).ok();
+    await t.expect(ProductsPage.pageTitle.innerText).eql(PAGES_TITLES.PRODUCTS_PAGE);
 });
 
 test('Login with an invalid user', async t => {
